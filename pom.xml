@@ -73,6 +73,11 @@
 			<artifactId>jquery-mask-plugin</artifactId>
 			<version>1.14.13</version>
 		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope><!--$NO-MVN-MAN-VER$-->
+		</dependency>
 	</dependencies>
 
 	<build>

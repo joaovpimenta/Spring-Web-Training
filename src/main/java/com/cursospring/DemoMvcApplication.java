@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Aplicação com Spring Web para treino.
+ * Aplicação com Spring Web para estudo.
  * @author João Pimenta
  * @since 29/03/2022
  */

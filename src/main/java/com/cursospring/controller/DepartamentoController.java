@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Aplicação com Spring Web para treino.
+ * Aplicação com Spring Web para estudo.
  * @author João Pimenta
  * @since 29/03/2022
  */
@@ -18,9 +18,9 @@ public class DepartamentoController {
 	public String cadastrar() {
 		return "/departamento/cadastro";
 	}
-	
+
 	@GetMapping("/listar")
 	public String listar() {
-		return "/departamento/lista"; 
+		return "/departamento/lista";
 	}
 }
