@@ -38,10 +38,12 @@ public class Funcionario extends AbstractEntity<Long> {
 	@Column(name = "data_saida", columnDefinition = "DATE")
 	private LocalDate dataSaida;
 
-	@NonNull @Column(unique = true) @OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "endereco_id_fk")
+	@NonNull @OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "endereco_id_fk")
 	private Endereco endereco;
 
-	@NonNull @Column(unique = true) @ManyToOne @JoinColumn(name = "cargo_id_fk")
+	@NonNull @ManyToOne @JoinColumn(name = "cargo_id_fk")
 	private Cargo cargo;
+	
+	
 
 }
