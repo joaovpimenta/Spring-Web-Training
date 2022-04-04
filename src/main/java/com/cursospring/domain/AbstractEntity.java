@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * Aplicação com Spring Web para treino.
@@ -16,6 +17,7 @@ import lombok.Data;
  * @since 29/03/2022
  */
 @Data
+@EqualsAndHashCode(callSuper = false)
 @SuppressWarnings("serial")
 @MappedSuperclass
 public abstract class AbstractEntity<ID extends Serializable> implements Serializable {

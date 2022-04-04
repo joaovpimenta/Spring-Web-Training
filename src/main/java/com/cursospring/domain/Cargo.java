@@ -10,22 +10,29 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 
 /**
  * Aplicação com Spring Web para treino.
+ * 
  * @author João Pimenta
  * @since 29/03/2022
  */
 
 @SuppressWarnings("serial")
-@Data @Entity @Table(name = "CARGOS")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Entity
+@Table(name = "CARGOS")
 public class Cargo extends AbstractEntity<Long> {
 
-	@NonNull @Column(name =  "nome", unique = true, length = 60)
+	@NonNull
+	@Column(name = "nome", unique = true, length = 60)
 	private String nome;
 
-	@ManyToOne @JoinColumn(name = "id_departamento_fk")
+	@ManyToOne
+	@JoinColumn(name = "id_departamento_fk")
 	private Departamento departamento;
 
 	@OneToMany(mappedBy = "cargo")

@@ -15,5 +15,5 @@ public interface FuncionarioDao {
 	public Funcionario findById(Long id);
 
 	public List<Funcionario> findAll();
-	
+
 }

@@ -8,19 +8,23 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.Data;
-import lombok.NonNull;
+import lombok.EqualsAndHashCode;
 
 /**
  * Aplicação com Spring Web para estudo.
+ *
  * @author João Pimenta
  * @since 29/03/2022
  */
 
 @SuppressWarnings("serial")
-@Data @Entity @Table(name = "DEPARTAMENTOS")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Entity
+@Table(name = "DEPARTAMENTOS")
 public class Departamento extends AbstractEntity<Long> {
 
-	@NonNull @Column(name =  "nome", unique = true, length = 60)
+	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 
 	@OneToMany(mappedBy = "departamento")

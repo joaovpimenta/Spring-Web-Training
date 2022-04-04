@@ -9,7 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.cursospring.dao.DepartamentoDao;
 import com.cursospring.domain.Departamento;
 
-@Service @Transactional
+@Service
+@Transactional
 public class DepartamentoServiceImpl implements DepartamentoService {
 
 	@Autowired
@@ -40,6 +41,11 @@ public class DepartamentoServiceImpl implements DepartamentoService {
 	@Transactional(readOnly = true)
 	public List<Departamento> buscarTodos() {
 		return departamentoDao.findAll();
+	}
+
+	@Override
+	public Boolean departamentoTemCargo(Long id) {
+		return (buscarPorId(id).getCargos().isEmpty());
 	}
 
 }
