@@ -11,7 +11,6 @@ import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NonNull;
 
 /**
  * Aplicação com Spring Web para treino.
@@ -27,8 +26,7 @@ import lombok.NonNull;
 @Table(name = "CARGOS")
 public class Cargo extends AbstractEntity<Long> {
 
-	@NonNull
-	@Column(name = "nome", unique = true, length = 60)
+	@Column(name = "nome", nullable = false, unique = true, length = 60)
 	private String nome;
 
 	@ManyToOne

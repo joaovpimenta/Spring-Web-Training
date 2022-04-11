@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Aplicação com Spring Web para estudo.
+ * 
  * @author João Pimenta
  * @since 29/03/2022
  */
